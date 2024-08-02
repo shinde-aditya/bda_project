@@ -59,8 +59,15 @@ def Add_Items():
 #DataFlair- function to delete items
 
 def Delete_Items():
-    
-    E1=Entry_1.get()
+    selected_item = item_list.get(tk.ACTIVE)
+    if selected_item:
+        item_name = selected_item.split(" - ")[0]
+        collection.delete_one({"name": item_name})
+        messagebox.showinfo("Success", "Item deleted!")
+
+
+
+    # E1=Entry_1.get()
     # with open(r"Proj_Database") as f, open(r"Proj_Database1", "w") as working:
     #     for line in f:
     #         if str(E1) not in line:
