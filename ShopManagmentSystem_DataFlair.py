@@ -14,7 +14,7 @@ collection = db["items"]
 
 root = Tk()
 root.title("Shop Managment System by DataFlair")
-root.configure(width=1500,height=600,bg="#e3f4f1")
+root.configure(width=1500,height=1000,bg="#e3f4f1")
 var=-1
 
 #DataFlair- function to add items
@@ -189,6 +189,11 @@ Label_5.grid(row=5,column=0, padx=10, pady=10)
 Entry_5= Entry(root, font=("Times new roman", 14),bd=8,width=25)
 Entry_5.grid(row=5,column=1, padx=10, pady=10)
 
+Label_6=Label(root, text="ENTER ITEM Update",bg="#e8c1c7",fg="black",bd=8, font=("Times new roman", 12, 'bold'),width=25)
+Label_6.grid(row=6,column=0, padx=10, pady=10)
+Entry_6=Entry(root, font=("Times new roman", 14),bd=8,width=25)
+Entry_6.grid(row=6,column=1, padx=10, pady=10)
+
  
 app = tk.Tk();
 item_list = tk.Listbox(app, font=("Arial", 12))
@@ -206,8 +211,14 @@ Button_4= Button(root, text="SEARCH ITEM",bd=8, bg="#49D810", fg="black", width 
 Button_4.grid(row=2,column=3, padx=40, pady=10)
 Button_5= Button(root, text="CLEAR SCREEN",bd=8, bg="#49D810", fg="black", width=25, font=("Times new roman", 12),command=Clear_Item)
 Button_5.grid(row=4,column=3, padx=40, pady=10)
+
+
 Button_6= Button(root,highlightcolor="blue",activebackground="red", text="Exit",bd=8, bg="#FF0000", fg="#EEEEF1", width=25, font=("Times", 40),command=Exit)
-Button_6.place(x=635,y=337,height= 102,width=245)
+Button_6.place(x=310,y=450,height= 102,width=245)
+
+Button_7= Button(root,text="ADD ITEM",bd=8, bg="#49D810", fg="black", width=25, font=("Times new roman", 12),command=Add_Items)
+Button_7.place(x=620,y=337,height= 102,width=245)
+
 Entry_6= Entry(root, font=("Times new roman", 14),justify='left',bd=8,width=25)
 Entry_6.grid(row=1,column=3, padx=10, pady=10)
 
