@@ -16,6 +16,7 @@ root = Tk()
 root.title("Shop Managment System by DataFlair")
 root.configure(width=1500,height=1000,bg="#e3f4f1")
 var=-1
+root.minsize(800,600);
 
 #DataFlair- function to add items
 
