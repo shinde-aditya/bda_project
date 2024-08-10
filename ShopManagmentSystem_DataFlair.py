@@ -29,29 +29,6 @@ def Add_Items():
     if item_name:
         item = {"name": item_name, "price": int(item_prize),"quantity": int(item_quantity),"category":item_category,"discount": int(item_discount)}
         collection.insert_one(item)
-        # Entry_1.delete(0, tk.END)
-        # Entry_2.delete(0, tk.END)
-        # Entry_3.delete(0, tk.END)
-        # Entry_4.delete(0, tk.END)
-        # Entry_5.delete(0, tk.END)
-    
-    # global var
-    # num_lines = 0
-    # with open("Proj_Database", 'r') as f10:
-    #     for line in f10:
-    #         num_lines += 1
-    # var=num_lines-1
-    # E1= Entry_1.get()
-    # E2=Entry_2.get()
-    # E3=Entry_3.get()
-    # E4=Entry_4.get()
-    # E5=Entry_5.get()
-    # f.write('{0} {1} {2} {3} {4}\n'.format(str(E1),E2,E3,str(E4),E5))
-    # Entry_1.delete(0, END)
-    # Entry_2.delete(0, END)
-    # Entry_3.delete(0, END)
-    # Entry_4.delete(0, END)
-    # Entry_5.delete(0, END)
     messagebox.showinfo("ADD ITEM", "ITEM ADDED SUCCESSFULLY....!!!!!")
 
 
@@ -67,21 +44,7 @@ def Delete_Items():
 
 
 
-    # E1=Entry_1.get()
-    # with open(r"Proj_Database") as f, open(r"Proj_Database1", "w") as working:
-    #     for line in f:
-    #         if str(E1) not in line:
-    #             working.write(line)
-    # Entry_1.delete(0, END)
-    # Entry_2.delete(0, END)
-    # Entry_3.delete(0, END)
-    # Entry_4.delete(0, END)
-    # Entry_5.delete(0, END)
-    # os.remove(r"Proj_Database")
-    # os.rename(r"Proj_Database1", r"Proj_Database")
-    # messagebox.showinfo("DELETE ITEM", "ITEM DELETED SUCCESSFULLY....!!!!!")
-    # f.close()
-    # working.close()
+    
 
 
 def display():
@@ -94,16 +57,7 @@ def display():
 
     
     
-    # root_1 = Tk()
-    # root_1.configure(bg="Gray")
-    # root_1.title("Stationary Store Database")
-    # scroll = Scrollbar(root_1)  
-    # scroll.pack( side = RIGHT, fill = Y)
-    # My_text = Text(root_1, yscrollcommand = scroll.set ,width=24,height= 18 ,bg= "gray",fg="black", font=("Times", 16))
-    # string = f.read() 
-    # My_text.insert(END,string)
-    # My_text.pack( side = LEFT, fill = BOTH )
-    # scroll.config( command = My_text.yview )
+    
 
 def update_item():
     selected_item = item_list.get(tk.ACTIVE)
@@ -125,50 +79,13 @@ def update_item():
 
 def Search_Item():
     Entry_1.delete(0, END)
-    # Entry_2.delete(0, END)
-    # Entry_3.delete(0, END)
-    # Entry_4.delete(0, END)
-    # Entry_5.delete(0, END)
-    # i=0
-    # flag = 1
-    # E1 = Entry_6.get()
-    # with open(r"Proj_Database") as working:
-    #     for line in working:
-    #         i=i+1
-    #         if str(E1) in line:
-    #             flag = 0
-    #             break
-    #     try:
-    #        if flag != 1:
-    #             v = list(line.split(" "))
-    #             Entry_1.delete(0, END)
-    #             Entry_2.delete(0, END)
-    #             Entry_3.delete(0, END)
-    #             Entry_4.delete(0, END)
-    #             Entry_5.delete(0, END)
-    #             Entry_1.insert(0, str(v[0]))
-    #             Entry_2.insert(0, str(v[1]))
-    #             Entry_3.insert(0, str(v[2]))
-    #             Entry_4.insert(0, str(v[3]))
-    #             Entry_5.insert(0, str(v[4]))
-
-    #     except:
-    #         messagebox.showinfo("Title", "error end of file")
-
-    #     if flag !=0:
-    #         messagebox.showinfo("Title", "NOT FOUND")
-    # working.close()
+   
 
 
 
 def Clear_Item():
     Entry_1.delete(0, END)
-    # Entry_2.delete(0, END)
-    # Entry_3.delete(0, END)
-    # Entry_4.delete(0, END)
-    # Entry_5.delete(0, END)
-    # Entry_6.delete(0, END)
-
+    
 
 def Exit():
     Exit= messagebox.askyesno("Exit the System","Do you want to Exit(y/n)?")
