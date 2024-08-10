@@ -105,6 +105,23 @@ def display():
     # My_text.pack( side = LEFT, fill = BOTH )
     # scroll.config( command = My_text.yview )
 
+def update_item():
+    selected_item = item_list.get(tk.ACTIVE)
+    if selected_item:
+        item_name = Entry_1.get()
+        new_price = Entry_2.get()
+        new_quantity = Entry_3.get()
+        new_category = Entry_4.get()
+        new_discount = Entry_5.get()
+
+
+
+
+        if new_quantity.isdigit() and item_name and new_category and new_price and new_discount:
+            item_name = selected_item.split(" - ")[0]
+            # collection.update_one( {"name": item_name},{"$set": {"price": new_price}}, {"$set": {"quantity": int(new_quantity)}},{"$set": {"category": new_category}},{"$set": {"discount": new_discount}});
+            collection.update_one({"name": item_name},{"$set": {"price": new_price}|{"quantity": int(new_quantity)}|{"category": new_category}|{"discount": new_discount}})
+            messagebox.showinfo("Success", "Item quantity updated!")
 
 def Search_Item():
     Entry_1.delete(0, END)
@@ -216,7 +233,7 @@ Button_5.grid(row=4,column=3, padx=40, pady=10)
 Button_6= Button(root,highlightcolor="blue",activebackground="red", text="Exit",bd=8, bg="#FF0000", fg="#EEEEF1", width=25, font=("Times", 40),command=Exit)
 Button_6.place(x=310,y=450,height= 102,width=245)
 
-Button_7= Button(root,text="ADD ITEM",bd=8, bg="#49D810", fg="black", width=25, font=("Times new roman", 12),command=Add_Items)
+Button_7= Button(root,text="UPDATE",bd=8, bg="#49D810", fg="black", width=25, font=("Times new roman", 12),command=update_item)
 Button_7.place(x=620,y=337,height= 102,width=245)
 
 Entry_6= Entry(root, font=("Times new roman", 14),justify='left',bd=8,width=25)
